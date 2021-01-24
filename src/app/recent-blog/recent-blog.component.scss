@@ -1,0 +1,27 @@
+#recentPostsBG {
+  background-color: #EDF7FA;
+  padding: 1em;
+}
+
+.rbpHeader {
+  display: inline;
+}
+
+#viewAll {
+  float: right;
+}
+
+.rbpContainer {
+  text-align: center;
+}
+
+.rbpItem {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 1em;
+  text-align: left;
+  @media (min-width: 800px) {
+    margin-right: 1em;
+    max-width: 45%;
+  }
+}

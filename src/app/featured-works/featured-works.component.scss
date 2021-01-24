@@ -1,0 +1,43 @@
+#featuredWorks {
+  padding: 1em;
+}
+
+.fwItem {
+  margin-bottom: 1em;
+  padding: 0;
+  left: 4%;
+  cursor: pointer;
+  @media (min-width: 800px) {
+    padding: 16px;
+  }
+}
+
+.fwContent {
+  @media (min-width: 800px) {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+}
+
+.fwImageContent {
+  display: inline-flex;
+  justify-content: center;
+  img {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    @media (min-width: 800px) {
+      height: 90%;
+      width: 90%;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.fwTextContent {
+  padding: 1em;
+  .fwTitle {
+    font-weight: 600;
+  }
+}

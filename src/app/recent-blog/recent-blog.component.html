@@ -1,0 +1,15 @@
+<div id="recentPostsBG">
+  <h1 class="rbpHeader">Recent posts</h1>
+  <a class="d-none d-md-block" id="viewAll" [routerLink]="['/blog']">View all</a>
+  <div class="rbpContainer" *ngIf="obs$ | async as blogPosts">
+    <mat-card class="rbpItem col" [ngClass]="{'show': show}" *ngFor="let blogPost of blogPosts.slice(0, 2)" (click)="onClick(blogPost.sys.id)">
+      <mat-card-header>
+        <mat-card-title>{{blogPost.fields.title}}</mat-card-title>
+        <mat-card-subtitle>{{blogPost.sys.createdAt | date:'shortDate'}} | {{blogPost.fields.readCount || 0}} min read</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{blogPost.fields.description}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

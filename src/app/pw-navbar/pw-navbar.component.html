@@ -1,0 +1,24 @@
+<!-- HTML for the (hamburger) navigation menu for screens <= 720px wide  -->
+<div class="d-block d-md-none">
+  <div class="mobile-nav">
+    <a class="fa-holder"></a>
+    <div id="pwMobileLinks">
+      <a class="mobileNavItem" [routerLink]="['']">Home</a>
+      <a class="mobileNavItem" [routerLink]="['/blog']">Blog</a>
+      <a class="mobileNavItem" [routerLink]="['/projects']">Projects</a>
+    </div>
+    <a class="icon" (click)="mobileMenuControl()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+<!-- HTML for navbar for screens > 720px wide  -->
+<nav class="d-none d-md-block">
+  <div class="col-9 offset-2">
+    <ul>
+      <li><a [routerLink]="['']">Home</a></li>
+      <li><a [routerLink]="['/blog']">Blog</a></li>
+      <li><a [routerLink]="['/projects']">Projects</a></li>
+    </ul>
+  </div>
+</nav>

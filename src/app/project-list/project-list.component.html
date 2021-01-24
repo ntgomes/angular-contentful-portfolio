@@ -1,0 +1,16 @@
+<div id="projectList" class="col-10 offset-1">
+  <h1 id="projectHeader">Projects</h1>
+  <div class="projectContainer" *ngIf="obs$ | async as projects">
+    <div class="projectContent" [ngClass]="{'show': show}" *ngFor="let project of projects" (click)="onClick(project.sys.id)">
+      <div class="projectImageContent">
+        <img [src]="project.fields.thumbnail.fields.file.url" />
+      </div>
+      <div class="projectTextContent">
+        <p class="projectTitle">{{project.fields.title}}</p>
+        <p>{{project.fields.year}}  | {{project.fields.themes}}</p>
+        <markdown>{{project.fields.description}}</markdown>
+      </div>
+      <hr />
+    </div>
+  </div>
+</div>

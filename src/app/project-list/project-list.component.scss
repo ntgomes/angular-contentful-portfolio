@@ -1,0 +1,38 @@
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+  
+.projectContent {
+  cursor: pointer;
+  @media (min-width: 800px) {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+}
+
+.projectImageContent {
+  display: inline-flex;
+  justify-content: center;
+  img {
+    border-radius: 5%;
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    @media (min-width: 800px) {
+      height: 90%;
+      width: 90%;
+    }
+  }
+}
+
+.projectTextContent {
+  .projectTitle {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+}
+  

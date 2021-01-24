@@ -1,0 +1,48 @@
+/* Heebo font imports using https://medium.com/@aditya_tyagi/import-fonts-in-an-angular-app-the-easy-right-way-ae9e99cab551 */
+@import 'assets/scss/modules/_fonts.scss';
+
+// primary font
+$primary_font: 'Heebo';
+// secondary font
+$secondary_font: 'MergeOne';
+
+// font-weight
+$thin:100;
+$light:300;
+$regular:400;
+$bold:700;
+$black:900;
+
+// font size
+$font-xs:12px;
+$font-sm: 14px;
+$primary-fs: 16px;
+$font-md: 18px;
+$font-lg: 20px;
+
+* {
+  font-family: $primary_font !important;
+  font-size: $primary-fs;
+  font-weight: $regular;
+}
+
+/* Necessary for markdown image references and captions */
+markdown {
+  p {
+    img {
+      margin-top: 1em;
+      display: block;
+      max-height: 100%;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid black;
+    }
+    em {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+  }
+}

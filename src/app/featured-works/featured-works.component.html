@@ -1,0 +1,17 @@
+<div id="featuredWorks">
+  <h1 id="fwHeader">Featured projects</h1>
+  <div class="fwContainer" *ngIf="obs$ | async as projects">
+    <mat-card class="fwItem col-11" [ngClass]="{'show': show}" *ngFor="let project of projects.slice(0, 3)" (click)="onClick(project.sys.id)">
+      <mat-card-content class="fwContent">
+        <div class="fwImageContent">
+          <img [src]="project.fields.thumbnail.fields.file.url" />
+        </div>
+        <div class="fwTextContent">
+          <mat-card-title class="fwTitle">{{project.fields.title}}</mat-card-title>
+          <mat-card-subtitle>{{project.fields.year}} | {{project.fields.themes}}</mat-card-subtitle>
+          <markdown>{{project.fields.description}}</markdown>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div id="bpList" class="col-10 offset-1">
+  <h1 class="bpHeader">Blog</h1>
+  <div class="bpContainer" *ngIf="obs$ | async as blogPosts">
+    <div class="bpItem" [ngClass]="{'show': show}" *ngFor="let blogPost of blogPosts" (click)="onClick(blogPost.sys.id)">
+      <p class="bpTitle">{{blogPost.fields.title}}</p>
+      <p class="bpSubtitle">{{blogPost.sys.createdAt | date:'fullDate'}} | {{blogPost.fields.readCount || 0}} min read</p>
+      <p class="bpDesc">{{blogPost.fields.description}}</p>
+      <hr />
+    </div>
+  </div>
+</div>
+<div style="height: 3em;"></div><!-- Some spacing -->

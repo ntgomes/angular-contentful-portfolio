@@ -1,0 +1,54 @@
+h1 {
+  font-family: 'Merge One' !important;
+  font-size: min(4em, 15vw);
+  text-align: center;
+  line-height: 1.5em;
+  @media (min-width: 768px) { /* 768px seems to just the right fit to avoid the double-line h1 bug */
+    white-space: nowrap;
+  }
+}
+.mobileImg {
+  float: right;
+  height: 10em;
+  width: 10em;
+  border-radius: 50%;
+}
+.desktopImg {
+  float: right;
+  height: 20em;
+  width: 20em;
+  border-radius: 50%;
+}
+.aboutMeContent {
+  margin-left: 4.0%;
+  max-width: 90%;
+  h2 {
+    text-align: center;
+    font-size: min(3em, 6vw);
+    font-weight: 900;
+    line-height: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  p {
+    font-size: min(1.2em, 4vw);
+    line-height: 1.5em;
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      margin-top: 1em;
+      height: 4em;
+      width: 20em;
+      span {
+        font-size: min(1.5em, 6vw);
+      }
+    }
+  }
+  @media (min-width: 900px) {
+    margin-left: 5em;
+    max-width: 85%;
+  }
+}

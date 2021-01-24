@@ -1,0 +1,60 @@
+nav {
+  background: white;
+  color: black;
+  height: 3em;
+  ul {
+    margin: 0;
+    float: right; /* To supercede the default rendering of ul taking up the rest of the line width */
+    li {
+      display: inline-block;
+      padding: 1em 1em 1em 0;
+      a {
+        cursor: pointer;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/****************************************************************
+ CSS rulesets for mobile navbar
+*****************************************************************/
+/* Style the navigation menu */
+.mobile-nav {
+  text-align: right;
+  overflow: hidden;
+  background-color: #ffffff;
+  position: relative;
+  margin-bottom: 1em;
+  #pwMobileLinks {
+    display: none;
+  }
+  a {
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    height: 2.5em;
+  }
+  a.icon {
+    background: #ffffff;
+    color: black;
+    display: block;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 0;
+  }
+  .mobileNavItem {
+    text-align: center;
+  }
+  .fa {
+    font-family: FontAwesome !important;
+  }
+}
+a:hover:not(.fa-holder) {
+  background-color: #ddd;
+  color: black;
+}
+a:not(.fa-holder) {
+  color: black;
+}

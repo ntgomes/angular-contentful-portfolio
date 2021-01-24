@@ -1,0 +1,16 @@
+<div class="contentContainer col-10 offset-1" *ngIf="obs$ | async as content">
+  <p class="contentTitle">{{content.fields.title}}</p>
+  <strong class="contentSubtitle">
+      {{content.fields.year || (content.sys.createdAt | date:'fullDate')}}
+      {{content.fields.readCount ? '| ' + content.fields.readCount + ' min read' : '| ' + content.fields.themes}}
+  </strong>
+  <br />
+  <i class="contentDesc">{{content.fields.description}}</i>
+  <div *ngIf="content.fields.thumbnail" class="thumbnailContainer">
+    <img class="thumbnailImg" [src]="content.fields.thumbnail.fields.file.url" />
+  </div>
+  <div style="height: 1em;"></div><!-- Some spacing -->
+  <markdown emoji class="contentBody">{{content.fields.body}}</markdown>
+  <hr />
+</div>
+<div style="height: 3em;"></div><!-- Some spacing -->
